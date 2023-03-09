@@ -2,7 +2,7 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 
-// Importando bibliotecas para trabalhar com servidor web
+// Importando biblioteca para trabalhar com servidor web
 #include <ESP8266WebServer.h>
 
 // Setando os dados para conexão wifi
@@ -43,11 +43,11 @@ void setup() {
     // 1º parâmetro -> Código de status de resposta HTTP
     // 2º parâmetro -> Cabeçalho da requisição
     // 3º parâmetro -> Corpo da requisição
-    server.send(200, "cabeçalho da requisição", "BEM VINDO AO SERVIDOR NODEMCU");
+    server.send(200, "cabeçalho_da_requisição", "BEM VINDO AO SERVIDOR NODEMCU");
   });
 
   server.on("/teste", [] () {
-    server.send(200, "cabeçalho da requisição", "BEM VINDO A PAGINA TESTE");
+    server.send(200, "cabeçalho_da_requisição", "BEM VINDO A PAGINA TESTE");
   });
 }
 
